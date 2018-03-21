@@ -26,6 +26,9 @@ class CashRegister
   end
 
   def void_last_transaction
-    puts self.last_transaction
+
+    quantity.times{ self.items << title }
+    self.total -= last_transaction[price] * last_transaction[quantity]
+
   end
 end
