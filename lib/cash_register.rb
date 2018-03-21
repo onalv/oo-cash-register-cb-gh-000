@@ -7,10 +7,12 @@ class CashRegister
     @total = 0.0
     @discount = discount.to_f
     @items = []
+    @last_transaction = {}
   end
 
   def add_item(title, price, quantity = 1)
     quantity.times{ self.items << title }
+    self.last_transaction = {:title => title, :price => price, :quantity => quantity}
     self.total += price * quantity
   end
 
