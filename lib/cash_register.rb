@@ -9,4 +9,12 @@ class CashRegister
   def self.add_item(item)
 
   end
+
+  def self.apply_discount
+
+  end
+
+  def self.void_last_transaction
+
+  end
 end
