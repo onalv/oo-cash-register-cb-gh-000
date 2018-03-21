@@ -21,6 +21,10 @@ class CashRegister
     end
   end
 
+  def items
+
+  end
+
   def self.void_last_transaction
 
   end
