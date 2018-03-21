@@ -1,7 +1,7 @@
 # require 'pry'
 
 class CashRegister
-  attr_accessor :total, :discount
+  attr_accessor :total, :discount, :items
 
   def initialize(discount = 0.0)
     @total = 0.0
@@ -21,10 +21,6 @@ class CashRegister
       self.total = self.total * (1.0 - self.discount/100.0)
       "After the discount, the total comes to $#{self.total.to_i}."
     end
-  end
-
-  def items
-
   end
 
   def self.void_last_transaction
